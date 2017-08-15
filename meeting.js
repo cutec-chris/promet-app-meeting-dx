@@ -6,6 +6,6 @@ dhtmlxEvent(window,"load",function(){
   Meetings.Grid.setColTypes("txt,txt,txt,txt");
   Meetings.Grid.attachHeader("#text_filter,#text_filter,,#text_filter");
   //Meetings.Grid.setColumnMinWidth('30' , 0);
-  Meetings.Grid.setInitWidths('*,70,150,70');
+  Meetings.Grid.setInitWidths('*,70,80,70');
   Meetings.Grid.init();
 });
