@@ -8,4 +8,13 @@ dhtmlxEvent(window,"load",function(){
   //Meetings.Grid.setColumnMinWidth('30' , 0);
   Meetings.Grid.setInitWidths('*,70,80,70');
   Meetings.Grid.init();
+  Meetings.OnCreateForm = function(aForm) {
+    aForm.Tabs.addTab(
+    "content",       // id
+    "Inhalt",    // tab text
+    null,       // auto width
+    null,       // last position
+    false,      // inactive
+    true);
+  }
 });
