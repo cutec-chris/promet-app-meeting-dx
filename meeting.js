@@ -16,5 +16,14 @@ dhtmlxEvent(window,"load",function(){
     null,       // last position
     false,      // inactive
     true);
+    aForm.Tabs.addTab(
+    "users",       // id
+    "Teilnehmer",    // tab text
+    null,       // auto width
+    null,       // last position
+    false,      // inactive
+    true);
+    aForm.Tabs.tabs("content").setActive();
+    aForm.Tabs.tabs("content").attachURL("http://google.com");
   }
 });
