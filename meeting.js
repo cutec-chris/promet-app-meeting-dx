@@ -23,7 +23,27 @@ dhtmlxEvent(window,"load",function(){
     null,       // last position
     false,      // inactive
     true);
+    aForm.UsersGrid = aForm.Tabs.tabs("users").attachGrid();
+    aForm.UsersGrid.setHeader(["Name","Code","Anwesend"]);
+    aForm.UsersGrid.setColumnIds('name,idcode,active');
+    aForm.UsersGrid.setColTypes("edtxt,edtxt,edtxt");
+    aForm.UsersGrid.init();
     aForm.Tabs.tabs("content").setActive();
     //aForm.Tabs.tabs("content").attachURL(GetBaseUrl()+'/meeting/by-id/'+aForm.Id+'/reports/Standart.pdf');
+    aForm.OnDataUpdated = function(bForm) {
+      var aHtml = '<div id="contId" style="position: relative; width: 100%; height: 100%; overflow: auto;font-family: Roboto,Arial,Helvetica;"><ul>';
+      for (var i = 0; i < bForm.Data.MEETINGENTRYS.length; i++) {
+        if (bForm.Data.MEETINGENTRYS[i].Fields.link != null)
+          aHtml += '<li><b><a href=\"'+bForm.Data.MEETINGENTRYS[i].Fields.link+'\">'+bForm.Data.MEETINGENTRYS[i].Fields.desc+'</a></b></li>'
+        else
+          aHtml += '<li>'+bForm.Data.MEETINGENTRYS[i].Fields.desc+'</li>';
+      }
+      aHtml += '</ul></div>';
+      aForm.Tabs.tabs("content").attachHTMLString(aHtml);
+
+      for (var i = 0; i < bForm.Data.MEETINGUSERS.length; i++) {
+        bForm.UsersGrid.add(bForm.Data.MEETINGUSERS[i].Fields.sql_id,[bForm.Data.MEETINGUSERS[i].Fields.name,bForm.Data.MEETINGUSERS[i].Fields.idcode,bForm.Data.MEETINGUSERS[i].Fields.active])
+      }
+    }
   }
 });
