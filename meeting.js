@@ -24,6 +24,6 @@ dhtmlxEvent(window,"load",function(){
     false,      // inactive
     true);
     aForm.Tabs.tabs("content").setActive();
-    aForm.Tabs.tabs("content").attachURL("http://google.com");
+    //aForm.Tabs.tabs("content").attachURL(GetBaseUrl()+'/meeting/by-id/'+aForm.Id+'/reports/Standart.pdf');
   }
 });
