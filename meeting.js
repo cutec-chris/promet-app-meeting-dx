@@ -42,7 +42,7 @@ dhtmlxEvent(window,"load",function(){
       aForm.Tabs.tabs("content").attachHTMLString(aHtml);
 
       for (var i = 0; i < bForm.Data.MEETINGUSERS.length; i++) {
-        bForm.UsersGrid.add(bForm.Data.MEETINGUSERS[i].Fields.sql_id,[bForm.Data.MEETINGUSERS[i].Fields.name,bForm.Data.MEETINGUSERS[i].Fields.idcode,bForm.Data.MEETINGUSERS[i].Fields.active])
+        bForm.UsersGrid.addRow(bForm.Data.MEETINGUSERS[i].Fields.sql_id,[bForm.Data.MEETINGUSERS[i].Fields.name,bForm.Data.MEETINGUSERS[i].Fields.idcode,bForm.Data.MEETINGUSERS[i].Fields.active])
       }
     }
   }
