@@ -22,6 +22,7 @@ dhtmlxEvent(window,"load",function(){
     aForm.MeetingGrid.setColTypes("ro");
     aForm.MeetingGrid.enableMultiline(true);
 		aForm.MeetingGrid.enableAutoWidth(true);
+    aForm.MeetingGrid.enableKeyboardSupport(true);
     aForm.MeetingGrid.init();
     aForm.Tabs.addTab(
     "users",       // id
