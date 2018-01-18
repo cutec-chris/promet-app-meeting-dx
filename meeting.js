@@ -1,5 +1,5 @@
 var Meetings;
-dhtmlxEvent(window,"load",function(){
+window.addEventListener('AfterLogin',function(){
   Meetings = newPrometList('meetings','Besprechungen');
   Meetings.Grid.setHeader(["Name","Status","Datum","ersteller"]);
   Meetings.Grid.setColumnIds('NAME,STATUS,DATE,CREATEDBY')
