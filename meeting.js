@@ -52,3 +52,10 @@ window.addEventListener('AfterLogin',function(){
     }
   }
 });
+window.addEventListener('AfterLogout',function(){
+  Meetings.Grid.destructor();
+  Meetings.Page.remove();
+  delete Meetings;
+  Meetings = {};
+  Meetings = null;
+});
