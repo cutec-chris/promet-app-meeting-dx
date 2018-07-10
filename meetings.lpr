@@ -92,7 +92,7 @@ begin
       if Assigned(TJSObject(Meetingentrys[i]).Properties['LINK']) and (copy(string(TJSObject(Meetingentrys[i]).Properties['LINK']),0,8)='PROJECTS') then
         nEntry.push('<b>'+string(TJSObject(Meetingentrys[i]).Properties['DESC'])+'</b>')
       else
-        nEntry.push(string(TJSObject(Meetingentrys[i]).Properties['DESC']));
+        nEntry.push(stringreplace(string(TJSObject(Meetingentrys[i]).Properties['DESC']),#13,'<br>',[rfReplaceAll]));
       nEntry.push(TJSObject(Meetingentrys[i]).Properties['USER']);
       nEntry.push(TJSObject(Meetingentrys[i]).Properties['DUEDATE']);
       nEntry.push(TJSObject(Meetingentrys[i]).Properties['OWNER']);

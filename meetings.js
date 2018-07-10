@@ -49,7 +49,7 @@
         nEntry = new Array();
         if (pas.System.Assigned(rtl.getObject(this.Meetingentrys[i])["LINK"]) && (pas.System.Copy("" + rtl.getObject(this.Meetingentrys[i])["LINK"],0,8) === "PROJECTS")) {
           nEntry.push(("<b>" + ("" + rtl.getObject(this.Meetingentrys[i])["DESC"])) + "<\/b>")}
-         else nEntry.push("" + rtl.getObject(this.Meetingentrys[i])["DESC"]);
+         else nEntry.push(pas.SysUtils.StringReplace("" + rtl.getObject(this.Meetingentrys[i])["DESC"],"\r","<br>",rtl.createSet(pas.SysUtils.TStringReplaceFlag.rfReplaceAll)));
         nEntry.push(rtl.getObject(this.Meetingentrys[i])["USER"]);
         nEntry.push(rtl.getObject(this.Meetingentrys[i])["DUEDATE"]);
         nEntry.push(rtl.getObject(this.Meetingentrys[i])["OWNER"]);
