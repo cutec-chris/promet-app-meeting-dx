@@ -19,7 +19,7 @@
     this.DoOnCreate = function () {
       this.Tabs.addTab("content",rtl.getResStr(pas.meetings,"strContent"),null,0,true,false);
       this.MeetingGrid = rtl.getObject(this.Tabs.cells("content").attachGrid(pas.JS.New([])));
-      this.MeetingGrid.setHeader("Inhalt,Bearbeiter,Termin,Verantwortlich",",",Array.of({}));
+      this.MeetingGrid.setHeader("Inhalt,Bearbeiter,Termin,Verantwortlich");
       this.MeetingGrid.setColumnIds("DESC,USER,DUEDATE,OWNER");
       this.MeetingGrid.setColTypes("ro,ro,ro,ro");
       this.MeetingGrid.setInitWidths("*,100,70,100");
@@ -29,7 +29,7 @@
       this.MeetingGrid.init();
       this.Tabs.addTab("users",rtl.getResStr(pas.meetings,"strUsers"),null,1,false,false);
       this.UsersGrid = rtl.getObject(this.Tabs.cells("users").attachGrid(pas.JS.New([])));
-      this.UsersGrid.setHeader("Name,Code,Anwesend",",",Array.of({}));
+      this.UsersGrid.setHeader("Name,Code,Anwesend");
       this.UsersGrid.setColumnIds("NAME,IDCODE,ACTIVE");
       this.UsersGrid.setColTypes("edtxt,edtxt,edtxt");
       this.UsersGrid.init();
@@ -79,9 +79,9 @@
     var aParent = null;
     if ($mod.Meeting === null) {
       aParent = rtl.getObject(pas.Avamm.GetAvammContainer());
-      $mod.Meeting = pas.AvammForms.TAvammListForm.$create("Create$1",[aParent,"meetings","1C"]);
+      $mod.Meeting = pas.AvammForms.TAvammListForm.$create("Create$2",[aParent,"meetings","1C"]);
       var $with1 = $mod.Meeting;
-      $with1.Grid.setHeader("Name,Status,Datum,ersteller",",",Array.of({}));
+      $with1.Grid.setHeader("Name,Status,Datum,ersteller");
       $with1.Grid.setColumnIds("NAME,STATUS,DATE,CREATEDBY");
       $with1.Grid.attachHeader("#text_filter,#text_filter,,#text_filter");
       $with1.Grid.setInitWidths("*,70,80,70");

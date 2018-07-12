@@ -40,7 +40,7 @@ begin
       Meeting := TAvammListForm.Create(aParent,'meetings');
       with Meeting do
         begin
-          Grid.setHeader('Name,Status,Datum,ersteller',',',TJSArray._of([]));
+          Grid.setHeader('Name,Status,Datum,ersteller');
           Grid.setColumnIds('NAME,STATUS,DATE,CREATEDBY');
           Grid.attachHeader('#text_filter,#text_filter,,#text_filter');
           Grid.setInitWidths('*,70,80,70');
@@ -56,7 +56,7 @@ procedure TMeetingForm.DoOnCreate;
 begin
   Tabs.addTab('content',strContent,null,0,true,false);
   MeetingGrid := TDHTMLXGrid(Tabs.cells('content').attachGrid(js.new([])));
-  MeetingGrid.setHeader('Inhalt,Bearbeiter,Termin,Verantwortlich',',',TJSArray._of([]));
+  MeetingGrid.setHeader('Inhalt,Bearbeiter,Termin,Verantwortlich');
   MeetingGrid.setColumnIds('DESC,USER,DUEDATE,OWNER');
   MeetingGrid.setColTypes('ro,ro,ro,ro');
   MeetingGrid.setInitWidths('*,100,70,100');
@@ -66,7 +66,7 @@ begin
   MeetingGrid.init();
   Tabs.addTab('users',strUsers,null,1,false,false);
   UsersGrid := TDHTMLXGrid(Tabs.cells('users').attachGrid(js.new([])));
-  UsersGrid.setHeader('Name,Code,Anwesend',',',TJSArray._of([]));
+  UsersGrid.setHeader('Name,Code,Anwesend');
   UsersGrid.setColumnIds('NAME,IDCODE,ACTIVE');
   UsersGrid.setColTypes('edtxt,edtxt,edtxt');
   UsersGrid.init();
