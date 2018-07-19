@@ -83,7 +83,7 @@
       var $with1 = $mod.Meeting;
       $with1.Grid.setHeader("Name,Status,Datum,ersteller");
       $with1.Grid.setColumnIds("NAME,STATUS,DATE,CREATEDBY");
-      $with1.Grid.attachHeader("#text_filter,#text_filter,,#text_filter");
+      $with1.SetFilterHeader("#text_filter,#text_filter,,#text_filter");
       $with1.Grid.setInitWidths("*,70,80,70");
       $with1.Grid.init();
     };

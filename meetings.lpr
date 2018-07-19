@@ -42,7 +42,7 @@ begin
         begin
           Grid.setHeader('Name,Status,Datum,ersteller');
           Grid.setColumnIds('NAME,STATUS,DATE,CREATEDBY');
-          Grid.attachHeader('#text_filter,#text_filter,,#text_filter');
+          FilterHeader := '#text_filter,#text_filter,,#text_filter';
           Grid.setInitWidths('*,70,80,70');
           Grid.init();
         end;
