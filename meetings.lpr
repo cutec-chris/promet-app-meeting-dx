@@ -117,7 +117,7 @@ end;
 
 initialization
   if getRight('meetings')>0 then
-    RegisterSidebarRoute(strMeeting,'Meeting',@ShowMeetingList);
+    RegisterSidebarRoute(strMeeting,'Meeting',@ShowMeetingList,'fa-users');
   Router.RegisterRoute('/meetings/by-id/:Id/',@ShowMeeting);
 end.
 

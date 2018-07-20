@@ -91,7 +91,7 @@
   };
   $mod.$resourcestrings = {strMeeting: {org: "Besprechungen"}, strContent: {org: "Inhalt"}, strUsers: {org: "Teilnehmer"}};
   $mod.$init = function () {
-    if (pas.Avamm.getRight("meetings") > 0) pas.Avamm.RegisterSidebarRoute(rtl.getResStr(pas.meetings,"strMeeting"),"Meeting",$mod.ShowMeetingList);
+    if (pas.Avamm.getRight("meetings") > 0) pas.Avamm.RegisterSidebarRoute(rtl.getResStr(pas.meetings,"strMeeting"),"Meeting",$mod.ShowMeetingList,"fa-users");
     pas.webrouter.Router().RegisterRoute("\/meetings\/by-id\/:Id\/",$mod.ShowMeeting,false);
   };
 });
